@@ -4,8 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Error from "../components/error";
 import Loader from "../components/Loader";
-import Success from "../components/Success";
-import { Tag, Divider } from "antd";
+import { Tag} from "antd";
 import { Link } from "react-router-dom";
 
 const { TabPane } = Tabs;
@@ -47,7 +46,6 @@ export const MyOrders = () => {
   const [mybookings, setmybookings] = useState([]);
   const [loading, setloading] = useState(false);
   const [error, seterror] = useState(false);
-  const [success, setsuccess] = useState(false);
   useEffect(() => {
     async function fetchCurrentuser() {
       try {
@@ -70,7 +68,7 @@ export const MyOrders = () => {
   async function cancelBooking(bookingid, roomid) {
     try {
       setloading(true);
-      const result = await axios.post("/api/bookings/cancelbooking", {
+       await axios.post("/api/bookings/cancelbooking", {
         bookingid: bookingid,
         userid: user._id,
         roomid: roomid,
@@ -80,11 +78,11 @@ export const MyOrders = () => {
         "Congrats",
         "Your Room has cancelled succeessfully",
         "success"
-      ).then((result) => {
+      ).then(() => {
         window.location.href = "/profile";
       });
     } catch (error) {
-      Swal.fire("Oops", "Something went wrong", "error").then((result) => {
+      Swal.fire("Oops", "Something went wrong", "error").then(() => {
         window.location.href = "/profile";
       });
       setloading(false);

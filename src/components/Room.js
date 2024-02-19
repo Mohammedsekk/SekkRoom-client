@@ -11,7 +11,7 @@ function Room({ room, fromdate, todate }) {
   return (
     <div className="row m-3 p-3 bs">
       <div className="col-md-4">
-        <img src={room.imageurls[0]} className="img-fluid" />
+        <img src={room.imageurls[0]} className="img-fluid" alt="ROOM "/>
       </div>
       <div className="col-md-8">
         <h1>{room.name}</h1>
@@ -53,7 +53,7 @@ function Room({ room, fromdate, todate }) {
                     src={url}
                     className="img-fluid"
                     style={{ height: "400px" }}
-                  />
+                 alt="room images" />
                 </Carousel.Item>
               );
             })}

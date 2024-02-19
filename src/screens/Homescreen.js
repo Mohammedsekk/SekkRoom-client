@@ -53,7 +53,7 @@ function Homescreen() {
         
         
       }
-      if(availability || room.currentbookings.length==0) 
+      if(availability || room.currentbookings.length ===0) 
       {
         temp.push(room)
       }

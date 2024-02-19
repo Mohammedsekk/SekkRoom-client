@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homescreen from "./screens/Homescreen";
 import Navbar from "./components/Navbar";
 import Loginscreen from "./screens/Loginscreen";
@@ -10,7 +9,7 @@ import Bookingscreen from "./screens/Bookingscreen";
 import Profilescreen from "./screens/Profilescreen";
 import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
-import React, { Component }  from 'react';
+import React from 'react';
 function App() {
   return (
     <div className="App">

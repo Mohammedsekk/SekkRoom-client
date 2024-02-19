@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import {useDispatch , useSelector} from 'react-redux'
 import axios from "axios";
 import Error from "../components/error";
 import Loader from "../components/Loader";
@@ -27,7 +26,7 @@ export default function Registerscreen() {
           
           try {
             setloading(true)
-            const result = await axios.post('/api/users/register',user)
+            await axios.post('/api/users/register',user)
             setloading(false)
             setsuccess(true)
             setemail('')

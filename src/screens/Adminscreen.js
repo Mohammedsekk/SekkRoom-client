@@ -1,16 +1,13 @@
 import React , {useState, useEffect} from "react";
 import { Tabs } from "antd";
 import axios from "axios";
-import Swal from "sweetalert2";
 import Error from "../components/error";
 import Loader from "../components/Loader";
-import Success from "../components/Success";
-import { Tag, Divider } from "antd";
 
 
 
 const { TabPane } = Tabs;
-const user = JSON.parse(localStorage.getItem("currentUser"));
+  JSON.parse(localStorage.getItem("currentUser"));
 function Adminscreen() {
   return (
     <div className="ml-3">
@@ -51,7 +48,6 @@ export function Bookings() {
   const [bookings, setbookings] = useState([]);
   const [loading, setloading] = useState(false);
   const [error, seterror] = useState(false);
-  const [success, setsuccess] = useState(false);
   useEffect( () => {
     async function fetchAdmin(){
        try {
@@ -108,7 +104,6 @@ export function Rooms() {
   const [rooms, setrooms] = useState([]);
   const [loading, setloading] = useState(false);
   const [error, seterror] = useState(false);
-  const [success, setsuccess] = useState(false);
   useEffect( () => {
     async function fetchroom(){
       try {

@@ -10,7 +10,7 @@ export default function Loginscreen() {
     const [password, setpassword] = useState("");
     const[loading, setloading]=useState(false)
     const[error, seterror]=useState(false)
-    const[success, setsuccess]=useState(false)    
+    const[success]=useState(false)    
 
     useEffect(() => {
 
